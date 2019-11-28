@@ -2,22 +2,25 @@ package com.example.jetpacktest;
 
 import android.util.Log;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class MainActivityViewModel extends ViewModel {
 	private String TAG = this.getClass().getSimpleName();
-	private String number;
+	private MutableLiveData<String> mldNumber;
 
-	public String getNumber() {
-		Log.i(TAG, "getNumber()");
-		if (number == null)
+	public MutableLiveData<String> getMldNumber() {
+		Log.i(TAG, "getMldNumber()");
+		if (mldNumber == null) {
+			mldNumber = new MutableLiveData<>();
 			createNumber();
-		return number;
+		}
+		return mldNumber;
 	}
 
-	private void createNumber() {
+	public void createNumber() {
 		Log.i(TAG, "createNumber()");
-		number = "Number: " + Math.random() * 100;
+		mldNumber.setValue("Number: " + Math.random() * 100);
 	}
 
 	@Override
