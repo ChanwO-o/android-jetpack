@@ -26,11 +26,11 @@
 
 	<fragment
 		android:name="com.google.ar.sceneform.ux.ArFragment"
-		android:id="@+id/ux_fragment"
+		android:id="@+id/ar_fragment"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="0dp"
+		app:layout_constrainedHeight="true"
 		app:layout_constraintTop_toBottomOf="@+id/bCreateNumber"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
