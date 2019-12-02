@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 public class ARControlFragment extends Fragment {
 
-	private ARControlViewModel mViewModel;
+	private MainActivityViewModel mViewModel;
 
 	public static ARControlFragment newInstance() {
 		return new ARControlFragment();
@@ -29,7 +29,7 @@ public class ARControlFragment extends Fragment {
 	@Override
 	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		mViewModel = ViewModelProviders.of(this).get(ARControlViewModel.class);
+		mViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
 		// TODO: Use the ViewModel
 	}
 
