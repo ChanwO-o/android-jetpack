@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
 	compileSdkVersion 28
@@ -47,3 +48,9 @@ dependencies {
 	implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 	annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 }
+
+
+sceneform.asset('sampledata/SciFi_Fighter.obj',
+        'default',
+        'sampledata/SciFi_Fighter.sfa',
+        'src/main/assets/SciFi_Fighter')
