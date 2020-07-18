@@ -1,0 +1,66 @@
+{
+  materials: [
+    {
+      name: 'SciFi_Fighter_AK5',
+      parameters: [
+        {
+          baseColor: 'SF_Fighter-Albedo',
+        },
+        {
+          baseColorTint: [
+            0.81568600000000002,
+            0.81568600000000002,
+            0.81568600000000002,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.33333299999999999,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/SciFi_Fighter.obj',
+    name: 'SciFi_Fighter',
+    recenter: 'root',
+    scale: 0.133741,
+  },
+  samplers: [
+    {
+      file: 'sampledata/SF_Fighter-Albedo.jpg',
+      name: 'SF_Fighter-Albedo',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'SF_Fighter-Albedo.jpg',
+    },
+    {
+      file: 'sampledata/SF_Fighter-Glow.jpg',
+      name: 'SF_Fighter-Glow',
+      pipeline_name: 'SF_Fighter-Glow.jpg',
+    },
+    {
+      file: 'sampledata/Map__6_Normal_Bump.tga',
+      name: 'Map__6_Normal_Bump',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'Map__6_Normal_Bump.tga',
+    },
+  ],
+  version: '0.54:2',
+}
